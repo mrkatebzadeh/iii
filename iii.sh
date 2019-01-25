@@ -37,7 +37,7 @@ ei="$(tput ritm; tput sgr0)"
 [ -p "$infile"  ] || exit 1
 [ -e "$outfile" ] || { touch "$outfile" || exit 1; }
 
-tailf -n "$h" "$outfile" | while IFS= read -r line
+tail -f -n "$h" "$outfile" | while IFS= read -r line
 do
 	unset date time nick mesg ctcp
 
